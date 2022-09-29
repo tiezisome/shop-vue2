@@ -1,10 +1,13 @@
 <template>
-  <div class="hello">MineCom</div>
+  <div class="home">
+ 
+    <p>this is Hot page</p>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'MineCom',
+  name: 'HomeCom',
 }
 </script>
 

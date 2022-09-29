@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <van-button type="primary">主要按钮</van-button>
+    <p>this is mine page</p>
   </div>
 </template>
 
