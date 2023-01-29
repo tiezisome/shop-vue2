@@ -1,20 +1,20 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import HomeView from '@/views/HomeView'
-import HotView from '@/views/HotView'
-import RecommendView from '@/views/RecommendView'
-import MineView from '@/views/MineView'
-Vue.use(VueRouter)
+import Vue from "vue";
+import VueRouter from "vue-router";
+Vue.use(VueRouter);
 
 const routes = [
-  { path: '/', name: 'home', component: HomeView },
-  { path: '/hot', name: 'home', component: HotView },
-  { path: '/recommend', name: 'home', component: RecommendView },
-  { path: '/mine', name: 'mine', component: MineView },
-]
+  { path: "/", name: "home", component: () => import("@/views/HomeView") },
+  { path: "/hot", name: "hot", component: () => import("@/views/HotView") },
+  {
+    path: "/recommend",
+    name: "recommend",
+    component: () => import("@/views/RecommendView"),
+  },
+  { path: "/mine", name: "mine", component: () => import("@/views/MineView") },
+];
 
 const router = new VueRouter({
   routes,
-})
+});
 
-export default router
+export default router;

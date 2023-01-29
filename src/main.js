@@ -1,33 +1,14 @@
-import Vue from 'vue'
-import App from './App.vue'
-import router from '@/router'
-import {
-  Button,
-  Tabbar,
-  TabbarItem,
-  Swipe,
-  SwipeItem,
-  Grid,
-  GridItem,
-  Icon,
-  PullRefresh,
-  Toast,
-  List,
-} from 'vant'
-Vue.config.productionTip = false
-
-Vue.use(Button)
-Vue.use(Tabbar)
-Vue.use(TabbarItem)
-Vue.use(Swipe)
-Vue.use(SwipeItem)
-Vue.use(Grid)
-Vue.use(GridItem)
-Vue.use(Icon)
-Vue.use(PullRefresh)
-Vue.use(Toast)
-Vue.use(List)
+import Vue from "vue";
+import App from "./App.vue";
+import router from "@/router";
+import { store } from "@/store/index.js";
+import "./assets/global.css";
+import ElementUI from "element-ui";
+import "element-ui/lib/theme-chalk/index.css";
+Vue.config.productionTip = false;
+Vue.use(ElementUI);
 new Vue({
   render: (h) => h(App),
   router,
-}).$mount('#app')
+  store,
+}).$mount("#app");
