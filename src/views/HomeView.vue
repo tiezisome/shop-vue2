@@ -78,7 +78,7 @@
           <el-pagination
             @size-change="handleSizeChange"
             @current-change="handleCurrentChange"
-            :current-page="currentPage4"
+            :current-page="currentPage"
             :page-sizes="[100, 200, 300, 400]"
             :page-size="100"
             layout="total, sizes, prev, pager, next, jumper"
@@ -148,6 +148,7 @@ export default {
   created() {
     this.add(1, 2);
     this.show();
+    console.log("$api", this.$api);
   },
   methods: {
     onLoad() {},
@@ -165,6 +166,11 @@ export default {
     indexMethod(index) {
       return (this.currentPage - 1) * this.pageSize + index + 1;
     },
+    handleSizeChange() {},
+    handleCurrentChange() {},
+    handleDetail() {},
+    handleOpen() {},
+    handleClose() {},
   },
 };
 </script>
